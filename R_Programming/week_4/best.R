@@ -38,5 +38,6 @@ best<-function(state,outcome){
   ordered_data<-state_data[ order(state_data[,outcome_idx]), ]
   #ordered_data<-min(clean_state_data[,outcome_idx])
   
-  ordered_data[1,2]
+  #ordered_data[1,2]
+  ordered_data
 }
