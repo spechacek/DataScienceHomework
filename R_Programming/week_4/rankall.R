@@ -30,7 +30,10 @@ rankall <- function(outcome, num = "best") {
       results_dataframe<-rbind(results_dataframe, b[nrow(b),c(2,7,outcome_idx)])
     }
     
-    if(is.numeric(num)){}
+    if(is.numeric(num)){
+      b<-best(states[s], outcome)
+      results_dataframe<-rbind(results_dataframe, b[num,c(2,7,outcome_idx)])
+    }
     
     #results_dataframe<-rbind(results_dataframe, best(states[s], outcome))
   }
