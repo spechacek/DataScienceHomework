@@ -37,7 +37,7 @@ best<-function(state,outcome){
     stop("invalid state")
   }
   
-  ordered_data<-state_data[ order(state_data[,outcome_idx]), ]
+  ordered_data<-state_data[ order(state_data[,outcome_idx], state_data[,2]), ]
   #ordered_data<-min(clean_state_data[,outcome_idx])
   
   #ordered_data[1,2]
