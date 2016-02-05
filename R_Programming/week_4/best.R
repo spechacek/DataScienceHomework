@@ -1,5 +1,7 @@
 #setwd("E:/Coursera/R_Programming/homework/week_4")
 
+rawdata <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+
 best<-function(state,outcome){
   
   valid_outcomes<-c("heart attack", "heart failure", "pneumonia")
@@ -15,7 +17,7 @@ best<-function(state,outcome){
   outcome_idx<-outcomes_lookup[outcomes_lookup$valid_outcomes == outcome,2]
   #message("outcome_idx is ", outcome_idx)
   
-  rawdata <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+  #rawdata <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
   
   #clean state data
   rawdata<-rawdata[!rawdata[,outcome_idx] == "Not Available",]
